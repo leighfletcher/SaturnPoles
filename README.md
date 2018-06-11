@@ -42,11 +42,17 @@ As described by Fletcher et al., 2018, the individual retrievals were used to ge
 
 # Reconstructed Ethane and Acetylene
 Finally, vertical distributions of ethane and acetylene were scaled during the retrievals of temperature, and can be used to estimate the latitudinal and temporal changes in these hydrocarbons at a single pressure level.  In the "polarcomp.sav" file, we provide estimates of the 1-mbar abundance of each species in ppmv as a function of latitude and time:
+
 C2H2_NORTH      FLOAT     = Array[493, 31]
+
 C2H2_SOUTH      FLOAT     = Array[493, 31]
+
 C2H6_NORTH      FLOAT     = Array[493, 31]
+
 C2H6_SOUTH      FLOAT     = Array[493, 31]
+
 NEWDAYS         FLOAT     = Array[493]
+
 NEWLAT          FLOAT     = Array[31]
 
 
