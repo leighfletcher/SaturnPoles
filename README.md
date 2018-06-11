@@ -38,4 +38,17 @@ FWHM~15 cm-1 gives the spectral resolution of the data, NGEOM=2 because the two 
 Each file is a seperate spectrum, with the format YYMM_lat_???.spx, where YYMM provides the year and month for the particular average.  
 
 # Reconstructed Temperatures
-As described by Fletcher et al., 2018, the individual retrievals were used to generate a "reconstructed" temperature field, using tensioned splines to interpolate the temperatures with time.
+As described by Fletcher et al., 2018, the individual retrievals were used to generate a "reconstructed" temperature field, using tensioned splines to interpolate the temperatures with time.  These outputs are stored as two IDL 'save' files, one for the North Pole and one for the South Pole.  These contain the interpolated temperatures (FINALTEMP) as an NPROxNLATxNDAYS array, where NPRO=120 is the number of pressure levels (in atm) in the PRESS array; NLAT=31 is the number of latitudes in the NEWLAT array (planetographic); NDAYS=493 is the number of days (Julian date) in the NEWDAYS array.  Note that these are only provides for 0.08 mbar to 1.2 bar, and dates before and after the Cassini/CIRS time series have been set to zero to avoid the temptation to extrapolate to other dates.
+
+# Reconstructed Ethane and Acetylene
+Finally, vertical distributions of ethane and acetylene were scaled during the retrievals of temperature, and can be used to estimate the latitudinal and temporal changes in these hydrocarbons at a single pressure level.  In the "polarcomp.sav" file, we provide estimates of the 1-mbar abundance of each species in ppmv as a function of latitude and time:
+C2H2_NORTH      FLOAT     = Array[493, 31]
+C2H2_SOUTH      FLOAT     = Array[493, 31]
+C2H6_NORTH      FLOAT     = Array[493, 31]
+C2H6_SOUTH      FLOAT     = Array[493, 31]
+NEWDAYS         FLOAT     = Array[493]
+NEWLAT          FLOAT     = Array[31]
+
+
+
+
