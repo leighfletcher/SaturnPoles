@@ -33,6 +33,9 @@ SPECTRUM_FP4 = FLTARR(NPTS_FP4, 3) ; 3 columns are wavenumber (cm-1), spectral r
 
 #############################
 
-FWHM~15 cm-1 gives the spectral resolution of the data, NGEOM=2 because the two focal planes, FP3 (600-1100cm-1) and FP4 (1100-1400 cm-1), are treated seperately.  NAV and WEIGHT are both flags set equal to one.  Note that data are provided over wider spectral ranges, but are considered untrustworthy (due to low responsivity and aliasing effects) outside of the ranges quoted above.  The user should consult the CIRS user manual for the locations of known electrical interferences affecting these spectra.
+FWHM~15 cm-1 gives the spectral resolution of the data, NGEOM=2 because the two focal planes, FP3 (600-1100cm-1) and FP4 (1100-1400 cm-1), are treated seperately.  NAV and WEIGHT are both flags set equal to one.  All latitudes are planetographic, all longitudes are System III West. Note that data are provided over wider spectral ranges, but are considered untrustworthy (due to low responsivity and aliasing effects) outside of the ranges quoted above.  The user should consult the CIRS user manual for the locations of known electrical interferences affecting these spectra.
 
 Each file is a seperate spectrum, with the format YYMM_lat_???.spx, where YYMM provides the year and month for the particular average.  
+
+# Reconstructed Temperatures
+As described by Fletcher et al., 2018, the individual retrievals were used to generate a "reconstructed" temperature field, using tensioned splines to interpolate the temperatures with time.
